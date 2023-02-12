@@ -1,0 +1,18 @@
+For python to read YAML.
+One must run the following command:
+
+pip install pyyaml
+
+---
+
+For js to read XML.
+One must run the following command:
+
+npm install xml2js
+
+---
+
+For js to read YAML.
+One must run the following command:
+
+npm install js-yaml

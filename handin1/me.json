@@ -1,0 +1,12 @@
+{
+    "person": {
+      "name": "Leopold",
+      "age": 28,
+      "hobbies": [
+        "Music",
+        "Programming",
+        "Singing"
+      ]
+    }
+  }
+  
