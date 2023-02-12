@@ -12,7 +12,8 @@ fs.readFile("me.csv", "utf8", (err, data) => {
   header.forEach((item, index) => {
     result1[item] = values[index];
   });
-  console.log("Reading CSV file...\n" + result1);
+  console.log("Reading CSV file...");
+  console.log(JSON.stringify(result1));
 });
 
 // 2 READ JSON FILE
@@ -21,7 +22,7 @@ fs.readFile("me.json", "utf8", (err, data) => {
 
   const result2 = JSON.parse(data);
 
-  console.log("Reading JSON file...\n" + result2);
+  console.log(`Reading JSON file...\n${JSON.stringify(result2)}`);
 });
 
 // 3 READ TXT FILE
@@ -36,7 +37,7 @@ fs.readFile("me.txt", "utf8", (err, data) => {
     result3[key] = value;
   }
 
-  console.log("Reading TXT file...\n" + result3);
+  console.log(`Reading TXT file...\n${JSON.stringify(result3)}`);
 });
 
 // 4 READ XML FILE
@@ -48,7 +49,7 @@ fs.readFile("me.xml", "utf8", (err, data) => {
   xml2js.parseString(data, (err, result4) => {
     if (err) throw err;
 
-    console.log("Reading XML file...\n" + result4);
+    console.log(`Reading XML file...\n${JSON.stringify(result4)}`);
   });
 });
 
@@ -60,7 +61,7 @@ fs.readFile("me.yaml", "utf8", (err, data) => {
 
   try {
     const doc = yaml.load(data);
-    console.log(doc);
+    console.log(`Reading YAML file...\n${JSON.stringify(doc)}`);
   } catch (e) {
     console.error(e);
   }
