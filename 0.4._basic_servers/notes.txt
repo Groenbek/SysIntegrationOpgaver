@@ -1,0 +1,23 @@
+cd test
+
+peotry init
+
+version 0.0.1
+desc enter
+author
+license mit
+Compatible Python Version
+would you like to difine bla bla bla enter
+
+søg på pakke emoji -> enter
+
+add package to skip enter
+enter
+confirm config enter
+
+poetry install
+peotry shell
+
+ny fil main.py
+i filen ---
+import emoji

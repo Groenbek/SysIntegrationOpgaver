@@ -1,6 +1,6 @@
 # 1 READ CSV FILE
 
-import yaml
+#import yaml
 import xml.etree.ElementTree as ET
 import json
 import csv
@@ -76,7 +76,7 @@ print("\n\n")
 
 # 5 READ YAML FILE
 
-print("Reading YAML file...\n")
+""" print("Reading YAML file...\n")
 
 with open("me.yaml") as file:
     data = yaml.safe_load(file)
@@ -87,4 +87,4 @@ hobbies = data["person"]["hobbies"]
 
 print("Name:", name)
 print("Age:", age)
-print("Hobbies:", hobbies)
+print("Hobbies:", hobbies) """

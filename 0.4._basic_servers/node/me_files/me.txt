@@ -1,0 +1,3 @@
+Name: Leopold
+Age: 28
+Hobbies: Music, Programming, Singing
