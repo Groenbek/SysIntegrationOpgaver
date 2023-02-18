@@ -1,3 +1,4 @@
+// To make sure node works, run: npm i
 // To run this file: node main.js
 
 const express = require('express');
