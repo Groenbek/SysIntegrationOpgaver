@@ -1,0 +1,13 @@
+Kør kommando
+npx mro
+hoststed on local host? enter
+db name classicmodels
+database username root
+database password 
+chost format - HTML page
+pick fields - vælg alle
+
+ls
+open filen den har lavet
+
+

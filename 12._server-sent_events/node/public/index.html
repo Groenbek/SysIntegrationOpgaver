@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>server-sent event</title>
+</head>
+    <body>
+        <h1>Server sent events</h1>
+        <div id="time-status"></div>
+        <div id="time"></div>
+
+
+    <script>
+    const eventSource = new EventSource("/time");
+    const timeStatusDiv = document.getElementById("time-status");
+
+    eventSource.addEventListener("message", (event) => {
+        document.getElementById("time").innerHTML = event.data;
+});
+
+    eventSource.addEventListener("open", (event) => {
+        timeStatusDiv.innerHTML = "Connection was opened."; 
+        console.log("Connection was opened."); 
+    });
+
+    eventSource.addEventListener("error", (event) => {
+        if (eventSource.readyState == EventSource.CLOSED) {
+            timeStatusDiv.innerHTML = "Connection was closed.";
+            console.log("Connection was closed.");
+        } else if (eventSource.readyState == EventSource.CONNECTING) {
+                timeStatusDiv.innerHTML = "Connection was lost. Reconnecting..."; 
+            console.log("Connection was lost. Reconnecting...");
+    } else {
+            timeStatusDiv.innerHTML = "An unknown error occurred.";
+            console.log("An unknown error occurred.");
+         }});
+        </script>
+</body>
+</html>

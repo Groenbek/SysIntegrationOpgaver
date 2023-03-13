@@ -1,0 +1,11 @@
+poetry init -n
+poetry add uvicorn fastapi
+poetry shell
+
+poetry add jinja?
+pip install sse-starlette
+poetry add asyncio
+
+univcorn main:app --reload
+
+Create main.py

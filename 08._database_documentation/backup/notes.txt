@@ -1,0 +1,5 @@
+Kør kommando 
+mysqldump -uroot -p mro > backup.sql
+
+Gør det modsatte
+mysqldump -uroot -p testdb < backup.sql 
